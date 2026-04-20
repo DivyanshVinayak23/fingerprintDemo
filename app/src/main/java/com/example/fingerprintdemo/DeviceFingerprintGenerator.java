@@ -46,7 +46,7 @@ public class DeviceFingerprintGenerator {
         }
 
         // 4. Sensors
-        SensorManager sensorManager = (SensorManager) context.getSystemService(Context.SENSOR_MANAGER);
+        SensorManager sensorManager = (SensorManager) context.getSystemService(Context.SENSOR_SERVICE);
         if (sensorManager != null) {
             List<Sensor> sensors = sensorManager.getSensorList(Sensor.TYPE_ALL);
             rawData.append("Sensor_Count:").append(sensors.size()).append("\n");
